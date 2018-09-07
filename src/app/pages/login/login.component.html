@@ -1,3 +1,38 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin">
+        <div class="card-body">
+          <div class="login-header-img mb-3">
+            <img src="../../../assets/images/scout_login.png">
+          </div>
+          <form class="form-signin" [formGroup]="loginForm">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" [formControl]="email" class="form-control" placeholder="Username" required autofocus>
+              <label for="inputEmail">Username</label>
+              <div *ngIf="email.invalid">{{getErrorEmailMessage()}}</div>
+            </div>
+
+            <div class="form-label-group">
+              <input [formControl]="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <label for="inputPassword">Password</label>
+              <div *ngIf="password.invalid">{{getErrorPasswordMessage()}}</div>
+            </div>
+
+
+            <button class="btn btn-lg btn-block btn-login mt-3" (click)="login()">Log In</button>
+            <div class="custom-control mt-3 mb-3 pad-0">
+
+              <label class="">-----EasyBridge Auto or Plus Account?-----</label>
+            </div>
+            <button class="btn btn-lg btn-block easy-bridge-btn">
+              <i class="fab fa-google mr-2"></i> Log In with EasyBridge</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer">Note: The Pearson Socut app requires a school-based subscription and a valid Pearson account.</div>
+
+</div>

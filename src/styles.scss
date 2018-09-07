@@ -1,0 +1,36 @@
+
+@import 'styles/colors';
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem;
+  }
+  
+  body {
+    /* background: #9CECFB;*/
+    color:$blue!important;
+    background: $light-blue !important;
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); */ 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .form-control:focus {
+      
+      box-shadow: none;
+  }
+
+  .pad-0{
+    padding:0 !important;
+  }
+  .btn:focus, .btn.focus,.btn:active {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $blue;
+}
+
+  .form-label-group[_ngcontent-c1] > input[_ngcontent-c1], .form-label-group[_ngcontent-c1] > label[_ngcontent-c1] {
+   padding:0;
+}
+  }
+
+
