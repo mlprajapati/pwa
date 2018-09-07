@@ -1,8 +1,27 @@
 
 @import '../../../../styles/colors';
 .footer{
-background-color:$blue;
+    background-color:$white;
     position: fixed;
     bottom:0;
     width: 100%;
 }
+.card{
+    border-radius: 0 !important;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: .6rem;
+    width: 100%;
+}
+.icon-footer{
+    font-size: 1.5rem;
+    color:gray;
+}
+.align-right{
+    text-align: right;
+}
+.align-center{
+    text-align: center;
+}
+  

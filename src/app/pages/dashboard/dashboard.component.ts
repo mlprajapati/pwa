@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  toggleMenu = false;
   constructor() { }
 
   ngOnInit() {
   }
+
+
+
+// toggle side menu bar
+toggleSideBar() {
+  this.toggleMenu = !this.toggleMenu;
+}
+
 
 }
