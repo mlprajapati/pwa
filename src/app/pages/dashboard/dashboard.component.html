@@ -1,9 +1,22 @@
+<app-header></app-header>
+<div class="page-container">
+        <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler">          
+                <i class="navbar-toggler-icon fa fa-bars"></i>All
+            </button>
+
+              <div class="title">test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br></div>
+             
+         
+  </div>
+<app-footer></app-footer>
+<div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
 <div class="wrapper">
 
   <!-- Sidebar -->
   <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
       <div class="sidebar-header">
           <h3>SCOUT APP</h3>
+          <h4><a href="javascript:void(0)" (click)="toggleSideBar()">&lt;Back</a></h4>
       </div>
 
       <ul class="list-unstyled components">
@@ -19,17 +32,4 @@
       </ul>
   </nav>
 
-  <!-- Page Content -->
-  <div id="content">
-      <nav class="navbar">
-          <div class="container-fluid">
-              <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler">          
-                  <i class="navbar-toggler-icon fa fa-bars"></i>
-              </button>
-              <div class="title">{{pageTitle}}</div>
-             
-          </div>
-      </nav>
-      <router-outlet></router-outlet>
-  </div>
 </div>   

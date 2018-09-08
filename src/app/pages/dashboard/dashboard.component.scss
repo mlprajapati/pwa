@@ -1,12 +1,4 @@
-#content {
-    width: 100%;
-    min-height: 100vh;
-    transition: all 0.3s;
-  }
-  
-  .navbar {
-    padding: 0 !important;
-  }
+@import '../../../styles/colors';
   
   .container-fluid {
     background-color: #04264F;
@@ -57,15 +49,39 @@
   
   
   .wrapper {
+    position: fixed;
     display: flex;
     align-items: stretch;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
+ 
+  .overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    background-color: #000;
+    opacity: .1;
+  }
+
+  .overlay.active {
+    display: block;
   }
   
   #sidebar {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
-    background: #003058;
+    background: $blue;
     color: #fff;
     transition: all 0.3s;
     margin-left: -250px;
