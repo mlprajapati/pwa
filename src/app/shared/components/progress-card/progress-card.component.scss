@@ -1,6 +1,20 @@
 @import '../../../../styles/colors';
 .card-header{
     padding: 0.5rem 1.25rem;
+    font-size: .75rem;
+}
+.assessment-type{
+    font-size: .75rem;
+    color:#7B050E;
+    font-weight: bold;
+    line-height: 0rem;
+
+}
+.assessment-subject{
+    font-size: .75rem;
+    color:$blue;
+    line-height: 0rem;
+
 }
   .progress{
     width: 100px;
@@ -75,10 +89,10 @@
     left: 5%;
 }
 .progress.blue .progress-bar{
-    border-color: #049dff;
+    border-color: $blue;
 }
 .progress.blue .progress-left .progress-bar{
-    animation: loading-2 1.5s linear forwards 1.8s;
+    animation: loading-3 1.5s linear forwards 1.8s;
 }
 .progress.yellow .progress-bar{
     border-color: #fdba04;
