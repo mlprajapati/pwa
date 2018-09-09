@@ -1,35 +1,85 @@
 <app-header></app-header>
 <div class="page-container">
-        <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler">          
+    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler">          
                 <i class="navbar-toggler-icon fa fa-bars"></i>All
             </button>
 
-              <div class="title">test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br></div>
-             
-         
-  </div>
-<app-footer></app-footer>
-<div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
-<div class="wrapper">
 
-  <!-- Sidebar -->
-  <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
-      <div class="sidebar-header">
-          <h3>SCOUT APP</h3>
-          <h4><a href="javascript:void(0)" (click)="toggleSideBar()">&lt;Back</a></h4>
-      </div>
+    <div class="row row-without-margin">
+        <div class="col-md-12 col-sm-12 col-12">
+           <app-progress-card></app-progress-card>
+        </div>
+    </div>
+    <div class="row row-without-margin">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-12">
+            <div class="card mb-3 card-withot-border" style="width: 100%">
+                <div class="card-header section-header">Recent Activity</div>
+                <div class="card-body card-body-withot-padding">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
 
-      <ul class="list-unstyled components">
-          <li [ngClass]="{'active': currentPage == '/'}">
-              <a (click)="goToPage('/', 'Home')"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
-          </li>
-          <li [ngClass]="{'active': currentPage == '/features'}">
-              <a (click)="goToPage('/features', 'Features')"><i class="fa fa-list"></i>&nbsp;&nbsp;Features</a>
-          </li>
-          <li [ngClass]="{'active': currentPage == '/about'}">
-              <a (click)="goToPage('/about', 'About Us')"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;About</a>
-          </li>
-      </ul>
-  </nav>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
 
-</div>   
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6 col-12">
+            <div class="card mb-3  card-withot-border" style="width: 100%">
+                <div class="card-header section-header">To Do's</div>
+                <div class="card-body card-body-withot-padding">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
+            <div class="sidebar-header">
+                <h3>SCOUT APP</h3>
+                <h4><a href="javascript:void(0)" (click)="toggleSideBar()">&lt;Back</a></h4>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li [ngClass]="{'active': currentPage == '/'}">
+                    <a (click)="goToPage('/', 'Home')"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
+                </li>
+                <li [ngClass]="{'active': currentPage == '/features'}">
+                    <a (click)="goToPage('/features', 'Features')"><i class="fa fa-list"></i>&nbsp;&nbsp;Features</a>
+                </li>
+                <li [ngClass]="{'active': currentPage == '/about'}">
+                    <a (click)="goToPage('/about', 'About Us')"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;About</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
