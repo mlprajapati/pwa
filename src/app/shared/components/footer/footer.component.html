@@ -1,26 +1,33 @@
 <div class="card footer">
-  <div class="card-body ">
+  <div class="card-body " style="text-align:center;">
+
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 mx-auto  align-center">
-        <div class="icon-bar">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 mx-auto align-center">
+        <div class="icon-bar  flex-center">
         <a class="icon-button" (click)="triggerVideoCamera()">
-              <i class="fa fa-file icon-footer"></i>
+              <i class="fa fa-file-text-o icon-footer"></i>
+              <p>Notes</p>
             </a>  
         <a class="icon-button" (click)="triggerVideoCamera()">
                 <i class="fa fa-video-camera icon-footer"></i>
+                <p>Media</p>
               </a>
         <a class="icon-button" (click)="triggerVideoCamera()">
-                  <i class="fa fa-video-camera icon-footer"></i>
+                  <i class="fa fa-cubes icon-footer"></i>
+                  <p>Dashboard</p>
                 </a>
         <a class="icon-button" (click)="triggerVideoCamera()">
-                    <i class="fa fa-chart icon-footer"></i>
+                    <i class="fa fa-bar-chart icon-footer"></i>
+                    <p>Report</p>
                   </a>
         <a class="icon-button" (click)="triggerVideoCamera()">
                       <i class="fa fa-users icon-footer"></i>
+                      <p>Student</p>
                     </a>
-                    <a class="icon-button" (click)="triggerCamera()">
-                        <i class="fa fa-camera icon-footer"></i>
-                      </a>
+        <a class="icon-button icon-right" (click)="triggerCamera()">
+            <i class="fa fa-camera icon-footer"></i>
+            <p>Camera</p>
+          </a>
         </div>
       </div>
     </div>
