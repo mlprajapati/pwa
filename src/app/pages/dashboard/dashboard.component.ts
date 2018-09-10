@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from '../../shared/components/header/header.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   toggleMenu = false;
-  constructor() { }
+  constructor(private headerService:HeaderService) { }
 
   ngOnInit() {
+    this.headerService.setHeaderTitle('Dashboard');
   }
 
 

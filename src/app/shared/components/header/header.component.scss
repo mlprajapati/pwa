@@ -4,7 +4,31 @@ background-color:$blue;
     position: fixed;
     top:0;
     width: 100%;
+    color: $white;
+    text-align: center;
+    padding: 0rem;
+    
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: .5rem;
+    
+}
+.header-title{
+    font-size: 2rem;
+}
+.serach-icon{
+    font-size: 2rem;
+    padding: .5rem;
+    right: 4.5rem;
+    position: absolute;
+    cursor: pointer;
 }
 .card{
     border-radius: 0 !important;
 }
+@media (max-width: 768px) {
+    .header{
+        text-align: left;
+    }
+  }
