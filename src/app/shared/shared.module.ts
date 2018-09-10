@@ -6,7 +6,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ProgressCardComponent } from './components/progress-card/progress-card.component';
 import { HeaderService } from './components/header/header.service';
 import { CommonModule } from '@angular/common';
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
     CarouselComponent,
     ProgressCardComponent
   ],
-  imports:[CommonModule],
+  imports:[CommonModule, SlickCarouselModule],
   exports: [
     HeaderComponent,
     FooterComponent,
