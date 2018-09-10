@@ -7,7 +7,7 @@ export class HeaderService {
     constructor(){
         
     }
-    get headerTitle() {
+    headerTitle() {
         return this._headerTitle.asObservable();
     }
     setHeaderTitle(title) {

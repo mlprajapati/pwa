@@ -42,15 +42,22 @@
 }
 
 .icon-button p{
-    color: $blue;
+    color: gray;
     font-size: .5rem;
     padding: 0;
     line-height: 0;
+}
+.icon-button p.active{
+    color: $blue;
+    
 }
 
 .icon-footer{
     font-size: 1.5rem;
     color:gray;
+}
+.icon-footer.active{
+    color:$blue;
 }
 .align-right{
     text-align: right;

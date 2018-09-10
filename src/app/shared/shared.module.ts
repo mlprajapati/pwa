@@ -5,6 +5,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ProgressCardComponent } from './components/progress-card/progress-card.component';
 import { HeaderService } from './components/header/header.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HeaderService } from './components/header/header.service';
     CarouselComponent,
     ProgressCardComponent
   ],
+  imports:[CommonModule],
   exports: [
     HeaderComponent,
     FooterComponent,

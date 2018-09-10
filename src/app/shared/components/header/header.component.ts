@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit,OnDestroy  {
   headerSubscription: Subscription;
   headerTitle:string = '';
   constructor(private headerService:HeaderService) { 
-    this.headerSubscription = this.headerService.headerTitle.subscribe(title=>this.headerTitle=title);
+    this.headerSubscription = this.headerService.headerTitle().subscribe(title=>this.headerTitle=title);
   }
 
   ngOnInit() {
