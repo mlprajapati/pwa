@@ -5,7 +5,6 @@
   }
   
   a, i{color:#ccc !important;}
-  .navbar i{color:#fff !important;}
   
   .navbar-toggler {
     padding: 0.7rem .75rem 0.25rem .20rem !important;
@@ -17,16 +16,21 @@
     outline: none;
   }
   
-  .navbar .title {
-    position: absolute;
-    left: 44px;
-    right: 44px;
-    text-align: center;
-    font-size: 150%;
-    font-weight: bold;
-    color: #fff;
+  .navbar {
+    i {
+      color: $white !important;
+    }
+    .title {
+      position: absolute;
+      left: 44px;
+      right: 44px;
+      text-align: center;
+      font-size: 150%;
+      font-weight: bold;
+      color: $white;
+    }
   }
-  
+
   .video {
     box-shadow: 1px 6px 10px 2px rgba(35, 35, 35, 0.62);
     height: 600px;
@@ -34,19 +38,21 @@
     width: 1067px;
   }
   
-  .nav-link:hover{
-    color:#fff !important;
-  }
-  .nav-link:focus, .active{
-    color:#fff !important;
-     font-weight: bold;
+  .nav-link {
+    &:hover {
+      color: $white !important;
+    }
+    &:focus,
+    .active {
+      color: $white !important;
+      font-weight: bold;
       text-decoration: none;
     }
-  
+  }
+
   .row {
     margin-bottom: 20px;
   }
-  
   
   .wrapper {
     position: fixed;
@@ -55,6 +61,7 @@
     z-index: 100;
     top: 0;
     left: 0;
+    
   }
  
   .overlay {
@@ -69,63 +76,64 @@
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
-    background-color: #000;
+    background-color: $black;
     opacity: .1;
+    &.active {
+      display: block;
+    }
   }
 
-  .overlay.active {
-    display: block;
-  }
-  
   #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 500px;
+    max-width: 500px;
     min-height: 100vh;
-    background: $blue;
-    color: #fff;
+    background: $white;
+    color: $blue;
     transition: all 0.3s;
-    margin-left: -250px;
+    margin-left: -500px;
+    &.active {
+      margin: 0;
+    }
+    .sidebar-header {
+      padding: 8px;
+      background: #6086c4;
+      text-align: center;
+      h5{
+        font-weight: 400;
+      }
+    }
+    ul {
+      &.components {
+        padding: 20px 0;
+      }
+      p {
+        color: $white;
+        padding: 10px;
+      }
+      li {
+        a {
+          padding: 10px;
+          font-size: 1.1em;
+          display: block;
+          cursor: pointer;
+        }
+      }
+      li:hover,
+      li.active {
+        color: $white !important;
+        background: #138496;
+      }
+      li.active>a,
+      a[aria-expanded="true"] {
+        color: $white !important;
+        text-decoration: none;
+      }
+      li.active>a>i {
+        color: $white !important;
+      }
+    }
   }
-  
-  #sidebar.active {
-    margin: 0;
-  }
-  
-  #sidebar .sidebar-header {
-    padding: 8px;
-    background: #138496;
-  }
-  
-  #sidebar ul.components {
-    padding: 20px 0;
-  }
-  
-  #sidebar ul p {
-    color: #fff;
-    padding: 10px;
-  }
-  
-  #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-    cursor: pointer;
-  }
-  
-  #sidebar ul li:hover, #sidebar ul li.active {
-    color: #fff !important;
-    background: #138496;
-  }
-  
-  #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff !important;
-    text-decoration: none;
-  }
-  
-  #sidebar ul li.active > a > i{
-    color: #fff !important;
-  }
-  
+   
   @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
