@@ -1,7 +1,22 @@
+@import '../../../../styles/colors';
 .avatar{
     font-size: 2rem;
-    padding: .5rem;
-    right: 20px;
+    padding: .4rem;
+    right: 1.5rem;
     position: absolute;
+    cursor: pointer;
+}
+.user{
+    font-size: 1.25rem;
+}
+.currentuser{
+    font-size: .75rem;
+    color: lightgray;
+    line-height: 10px;
+}
+.avatar-link{
+    padding: 12px 0 0 0;
+    font-weight: bold;
+    color: $blue;
     cursor: pointer;
 }

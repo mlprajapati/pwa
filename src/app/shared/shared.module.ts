@@ -7,6 +7,9 @@ import { ProgressCardComponent } from './components/progress-card/progress-card.
 import { HeaderService } from './components/header/header.service';
 import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from '../services/user.service';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -15,7 +18,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     CarouselComponent,
     ProgressCardComponent
   ],
-  imports:[CommonModule, SlickCarouselModule],
+
+  imports:[CommonModule,NgbModule.forRoot(),SlickCarouselModule],
   exports: [
     HeaderComponent,
     FooterComponent,
@@ -29,7 +33,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [HeaderService
+      providers: [HeaderService,UserService
         
       ]
     };

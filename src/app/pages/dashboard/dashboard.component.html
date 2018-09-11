@@ -1,4 +1,4 @@
-<app-header></app-header>
+
 <div class="page-container">
     <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">          
         <i class="navbar-toggler-icon fa fa-bars"></i>All
@@ -64,10 +64,10 @@
             </div>
         </div>
     </div>
+    <app-header></app-header>
     <app-footer [activeClass]="'dashboard'"></app-footer>
     <div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
     <div class="wrapper">
-
         <!-- Sidebar -->
         <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
             <div class="sidebar-header">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import $ from 'JQuery';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
+
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
