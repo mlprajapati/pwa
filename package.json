@@ -32,10 +32,13 @@
     "lite-server": "^2.4.0",
     "ngx-slick-carousel": "^0.4.0",
     "ngx-treeview": "^6.0.1",
+    "npm": "^6.4.1",
     "popper": "^1.0.1",
     "popper.js": "^1.14.4",
     "rxjs": "^6.0.0",
     "slick-carousel": "^1.8.1",
+    "to": "^0.2.9",
+    "update": "^0.7.4",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

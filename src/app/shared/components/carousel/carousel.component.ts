@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
-
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -9,7 +8,9 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   
+   }
 
   ngOnInit() {
 
