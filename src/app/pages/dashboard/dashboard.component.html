@@ -1,19 +1,18 @@
-
 <div class="page-container">
-    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">          
+    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">
         <i class="navbar-toggler-icon fa fa-bars"></i>All
     </button>
-    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">          
+    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">
         <i class="navbar-toggler-icon fa fa-bars"></i>Recent
     </button>
-    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">          
+    <button type="button" id="sidebarCollapse" (click)="toggleSideBar()" class="navbar-toggler ">
         <i class="navbar-toggler-icon fa fa-bars"></i>Change grade
     </button>
 
 
     <div class="row row-without-margin">
         <div class="col-md-12 col-sm-12 col-12">
-           <app-carousel></app-carousel>
+            <app-carousel></app-carousel>
         </div>
     </div>
     <div class="row row-without-margin">
@@ -68,24 +67,40 @@
     <app-footer [activeClass]="'dashboard'"></app-footer>
     <div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
     <div class="wrapper">
-        <!-- Sidebar -->
         <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
             <div class="sidebar-header">
+                <h5>Assessments</h5>
+                <h6>
+                    <a (click)="toggleSideBar()">&lt;Back</a>
+                </h6>
+            </div>
+            <ngx-treeview [config]="sidebarConfig" [items]="itCategory" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)">
+            </ngx-treeview>
+        </nav>
+        <!-- Sidebar -->
+        <!--  <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
+            <div class="sidebar-header">
                 <h3>SCOUT APP</h3>
-                <h4><a href="javascript:void(0)" (click)="toggleSideBar()">&lt;Back</a></h4>
+                <h4>
+                    <a href="javascript:void(0)" (click)="toggleSideBar()">&lt;Back</a>
+                </h4>
             </div>
 
             <ul class="list-unstyled components">
                 <li [ngClass]="{'active': currentPage == '/'}">
-                    <a (click)="goToPage('/', 'Home')"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
+                    <a (click)="goToPage('/', 'Home')">
+                        <i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
                 </li>
                 <li [ngClass]="{'active': currentPage == '/features'}">
-                    <a (click)="goToPage('/features', 'Features')"><i class="fa fa-list"></i>&nbsp;&nbsp;Features</a>
+                    <a (click)="goToPage('/features', 'Features')">
+                        <i class="fa fa-list"></i>&nbsp;&nbsp;Features</a>
                 </li>
                 <li [ngClass]="{'active': currentPage == '/about'}">
-                    <a (click)="goToPage('/about', 'About Us')"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;About</a>
+                    <a (click)="goToPage('/about', 'About Us')">
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp;About</a>
                 </li>
             </ul>
-        </nav>
+        </nav>-->
 
     </div>
+</div>
