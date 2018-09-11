@@ -84,13 +84,13 @@
   }
 
   #sidebar {
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 350px;
+    max-width: 350px;
     min-height: 100vh;
     background: $white;
     color: $blue;
     transition: all 0.3s;
-    margin-left: -500px;
+    margin-left: -350px;
     &.active {
       margin: 0;
     }
@@ -132,11 +132,16 @@
         color: $white !important;
       }
     }
+    .back-arrow{
+      position: absolute;
+      right: .5rem;
+      padding-top: .2rem;
+    }
   }
    
   @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
+        margin-left: -350px;
     }
     #sidebar.active {
         margin-left: 0;
