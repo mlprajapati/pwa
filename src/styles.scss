@@ -58,9 +58,9 @@
    padding:0;
 }
 .page-container{
-  margin-top: 4.1rem;
-  height: calc(100% - 7.5rem);
-  max-height: calc(100% - 7.5rem);
+  margin-top: 3.75rem;
+  height: calc(100% - 7.25rem);
+  max-height: calc(100% - 7.25rem);
   overflow-y: auto;
   width: 100%;
   position: fixed;
@@ -81,8 +81,16 @@
 .row-without-margin {
   display: flex;
   flex-wrap: wrap;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+  
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
   margin-right: 0px;
-  margin-left: 0px;
+  margin-left: 0px;  
 }
   }
   app-avatar{

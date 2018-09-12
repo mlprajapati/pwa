@@ -8,7 +8,8 @@ import { TelemetryService } from '../../services/telemetry.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  toggleMenu = false;
+  toggleAssessment = false;
+  toggleSearch = false;
   itCategory: TreeviewItem[];
   sidebarConfig;
   constructor(private headerService: HeaderService, private telemetryService:TelemetryService) { }
@@ -38,8 +39,14 @@ export class DashboardComponent implements OnInit {
 
 
   // toggle side menu bar
-  toggleSideBar() {
-    this.toggleMenu = !this.toggleMenu;
+  toggleAssessSideBar() {
+    this.toggleSearch =false;
+    this.toggleAssessment = !this.toggleAssessment;
+  }
+   // toggle side menu bar
+   toggleSearchSideBar() {
+    this.toggleAssessment =false;
+    this.toggleSearch = !this.toggleSearch;
   }
   onFilterChange(event) {
 

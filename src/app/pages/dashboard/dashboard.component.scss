@@ -95,12 +95,11 @@
       margin: 0;
     }
     .sidebar-header {
-      padding: 8px;
-      background: #6086c4;
+      font-size: 1.25rem;
+      padding: .95rem;
+      background: $blue;
+      color:$white;
       text-align: center;
-      h5{
-        font-weight: 400;
-      }
     }
     ul {
       &.components {
@@ -136,7 +135,15 @@
       position: absolute;
       right: .5rem;
       padding-top: .2rem;
+      cursor: pointer;
     }
+  }
+  .row-without-margin-carousle {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    width: calc(100% - 25px);
+    text-align: center;
   }
    
   @media (max-width: 768px) {
