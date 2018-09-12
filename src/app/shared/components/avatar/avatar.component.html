@@ -1,6 +1,9 @@
-<i class="fa fa-user-circle-o avatar" data-toggle="popover" data-placement="bottom" data-content="Content"></i>
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();   
-    });
-</script>
+<i class="fa fa-user-circle-o avatar" [placement]="'bottom'" [ngbPopover]="popContent"
+triggers="manual" #p1="ngbPopover" (click)="toggleWithGreeting(p1)"></i>
+<ng-template #popContent let-greeting="greeting">
+    <div class="user">{{name}}</div>
+    <div class="currentuser">{{username}}</div>
+    <div class="avatar-link"><a  (click)="logout()">Log Out</a></div>
+    <div class="avatar-link"><a  (click)="openFaq()">FAQs</a></div>
+</ng-template>
+

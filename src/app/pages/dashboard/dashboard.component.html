@@ -63,20 +63,16 @@
             </div>
         </div>
     </div>
-
-
     <app-header></app-header>
     <app-footer [activeClass]="'dashboard'"></app-footer>
     <div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
-
-
     <div class="wrapper">
         <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
             <div class="sidebar-header">
-                <h5>Assessments</h5>
-                <h6>
-                    <a (click)="toggleSideBar()">&lt;Back</a>
-                </h6>
+                <span>Assessments</span> <span><a (click)="toggleSideBar()"><i class="fa fa-arrow-left back-arrow"></i></a></span>
+                
+                    
+                
             </div>
             <ngx-treeview [config]="sidebarConfig" [items]="itCategory" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)">
             </ngx-treeview>

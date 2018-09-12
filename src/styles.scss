@@ -85,6 +85,22 @@
   margin-left: 0px;
 }
   }
+  app-avatar{
+    .popover{
+      z-index: 98;
+      top: 50px !important;
+      right: 15px !important;
+      left:unset !important;
+      .arrow{
+        left:unset !important;
+        right: 14px !important;
+      }
+      .popover-body{
+        min-width: 12rem !important;
+    }
+    }
+    
+  } 
   
 
 
