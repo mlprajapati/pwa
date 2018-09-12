@@ -169,7 +169,7 @@
     }
   }
 
-  .apnel-group{
+  .panel-group{
     max-height: calc(100% - 55px);
     overflow-y: auto;
     height: calc(100% - 55px);
@@ -180,3 +180,26 @@
     font-size: 0.8em;
     margin-left: 15px;
   }
+
+  .student-modal{
+    .header-container{
+      width:100%;
+    }
+    .sub-header{
+      background: red;
+      padding: 3px 15px;
+      color: #d2d2d2;
+      font-size: 0.8em;
+    }
+    .item-title{
+      color: #032356;
+      padding: 5px 0 0 15px;
+      border-bottom:1px solid #d2d2d2;
+    }
+    .back-btn{
+      padding: 15px;
+    }
+    
+  }
+  
+  

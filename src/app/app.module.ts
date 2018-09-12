@@ -15,7 +15,6 @@ import { JwtInterceptor } from './helper/jwt.interceptor';
 import { fakeBackendProvider } from './helper/fake.backend';
 import {LoginComponent} from './pages/login/login.component';
 import { PagesModule } from './pages/pages.module';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +29,7 @@ import { PagesModule } from './pages/pages.module';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
     HttpClientModule,
+    
   ],
   providers: [AuthGuard,AuthenticationService,
     {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true},

@@ -67,58 +67,46 @@
     <app-footer [activeClass]="'dashboard'"></app-footer>
     <div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
     <div class="wrapper">
-
         <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
             <div class="sidebar-header">
                 <span>Assessments</span> <span><a (click)="toggleSideBar()"><i class="fa fa-arrow-left back-arrow"></i></a></span>
-                <!-- <h5>Assessments</h5> -->
-                <!-- <div class="pull-right">
-                    <a (click)="toggleSideBar()">&lt;Back</a>
-                </div> -->
+
             </div>
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default" *ngFor="let itm of sideMenuData; let i = index" [attr.data-index]="i">
                     <div class="panel-heading">
                         <div class="panel-title">
-                                <i class="fa fa-chevron-down"></i>
+                            <i class="fa fa-chevron-down"></i>
                             <div data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
                                 {{itm.text}}
-                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse in" *ngFor="let child of itm.children">
-                        <div class="panel-body">{{child.text}}</div>
+                        <div class="panel-body" (click)="htmlInsideModal.open()">{{child.text}}</div>
                     </div>
                 </div>
-                
+
             </div>
-            <!--<ngx-treeview [config]="sidebarConfig" [items]="itCategory" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)">
-            </ngx-treeview>-->
         </nav>
-        <!-- Sidebar -->
-        <!--  <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
-            <div class="sidebar-header">
-                <h3>SCOUT APP</h3>
-                <h4>
-                    <a href="javascript:void(0)" (click)="toggleSideBar()">&lt;Back</a>
-                </h4>
-            </div>
 
-            <ul class="list-unstyled components">
-                <li [ngClass]="{'active': currentPage == '/'}">
-                    <a (click)="goToPage('/', 'Home')">
-                        <i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
-                </li>
-                <li [ngClass]="{'active': currentPage == '/features'}">
-                    <a (click)="goToPage('/features', 'Features')">
-                        <i class="fa fa-list"></i>&nbsp;&nbsp;Features</a>
-                </li>
-                <li [ngClass]="{'active': currentPage == '/about'}">
-                    <a (click)="goToPage('/about', 'About Us')">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp;About</a>
-                </li>
-            </ul>
-        </nav>-->
 
+        <modal #htmlInsideModal class="student-modal">
+            <ng-template #modalHeader>
+                <div class="header-container">
+                    <span class="back-btn pull-left">Back</span>
+                    <div class="card-body"><span class="header-title">Assessment Checklist</span>
+
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #modalBody>
+                <div class="sub-header">
+                    Grade1 > Unit2 > Investigation2 > Session 2.4
+                </div>
+                <div class="item-title">A11: Constructing and Drawing 2-D Shapes</div>
+            </ng-template>
+            <ng-template #modalFooter></ng-template>
+        </modal>
     </div>
 </div>

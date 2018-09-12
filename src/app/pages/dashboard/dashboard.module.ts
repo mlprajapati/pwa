@@ -4,6 +4,8 @@ import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 
+
+import { ModalModule } from 'angular-custom-modal';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: '**', component: DashboardComponent }
@@ -12,7 +14,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModule.forRoot(),
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ModalModule
   ],
   declarations: [DashboardComponent]
 })
