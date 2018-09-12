@@ -1,0 +1,119 @@
+@import '../../../../styles/colors';
+.search-icon{
+    font-size: 1.75rem;
+    padding: .4rem 0;
+    position: absolute;
+    color: $white;
+}
+.search-box{
+    width: 1rem;
+    padding-left: 2rem;
+}
+.clear-btn{
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    right: -50px;
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+.form-control, .form-control:focus {
+    color: $white;
+    background-color:transparent;
+    border-color:none;
+    border:none;
+}
+#wrapper {
+    position: fixed;
+    display: flex;
+    align-items: stretch;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 50%;
+    margin-right: -50%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &.active {
+        margin: 0px;
+      }
+}
+
+#sidebar-wrapper {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background: $white;
+    color: $blue;
+    transition: all 0.3s;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    
+    .sidebar-header {
+        font-size: 1.25rem;
+        padding: .7rem;
+        background: $blue;
+        color:$white;
+        text-align: left;
+        .input-group {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            width: calc(100% - 50px);
+            margin: 0;
+            padding: 0;
+        }
+      }
+      ul {
+        &.components {
+          padding: 20px 0;
+        }
+        p {
+          color: $white;
+          padding: 10px;
+        }
+        li {
+          a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+            cursor: pointer;
+          }
+        }
+        li:hover,
+        li.active {
+          color: $white !important;
+          background: #138496;
+        }
+        li.active>a,
+        a[aria-expanded="true"] {
+          color: $white !important;
+          text-decoration: none;
+        }
+        li.active>a>i {
+          color: $white !important;
+        }
+      }
+      .back-arrow{
+        position: absolute;
+        right: .5rem;
+        padding-top: .2rem;
+        cursor: pointer;
+      }
+}
+
+@media(max-width:768px) {
+    #wrapper {
+        width: 90%;
+        margin-right: -90%;
+    }
+    #wrapper.active {
+        margin-right: 0;
+    }
+}

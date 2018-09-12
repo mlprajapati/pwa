@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../shared/components/header/header.service';
-import { TreeviewItem, TreeviewConfig } from 'ngx-treeview';
-import { TelemetryService } from '../../services/telemetry.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,50 +9,52 @@ import { TelemetryService } from '../../services/telemetry.service';
 export class DashboardComponent implements OnInit {
   toggleAssessment = false;
   toggleSearch = false;
-  itCategory: TreeviewItem[];
+  toggleMenu = false;
   sidebarConfig;
-  constructor(private headerService: HeaderService, private telemetryService:TelemetryService) { }
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit() {
     this.headerService.setHeaderTitle('Dashboard');
-    this.sidebarConfig = TreeviewConfig.create({
-      hasAllCheckBox: false,
-      hasFilter: false,
-      hasCollapseExpand: false,
-      decoupleChildFromParent: false
-    });
-
-    this.itCategory = this.telemetryService.getBooks();
-
-    console.log('itCategory', this.itCategory);
+   
   }
-
-  /**
-   * side menu
-   */
-
-
-  /**
-   * sidebar menu dummy data. had to remove one get actual data
-   */
-
 
   // toggle side menu bar
   toggleAssessSideBar() {
     this.toggleSearch =false;
     this.toggleAssessment = !this.toggleAssessment;
   }
-   // toggle side menu bar
-   toggleSearchSideBar() {
-    this.toggleAssessment =false;
-    this.toggleSearch = !this.toggleSearch;
-  }
-  onFilterChange(event) {
 
-  }
 
-  onSelectedChange(event) {
+  /**
+   * sidebar menu dummy data. had to remove one get actual data
+   */
+  sideMenuData = [
+    {
+      text: 'Unit 1: Comparing and Combining Shapes', children: [
+        { text: 'Investigation 1: Composing and Decomposing 2-D Shapes' }]
+    }, {
+      text: 'Unit 2: Comparing and Combining Shapes', children: [
+        { text: 'Investigation 1: Composing and Decomposing 2-D Shapes' },
+        { text: 'Investigation 2: Describing and Sorting Shapes' },
+        {
+          text: 'Investigation 3: Describing and Sorting Shapes', children: [
+            { text: 'Session 2.1: Sorting Shapes and Making a Shape Poster' },
+            { text: 'Session 2.2: Describing Trangles' },
+            { text: 'Session 2.3: Describing Quadrilaterals' },
+            { text: 'Session 2.4: What is Trangle?' },
+            { text: 'Session 2.5: Describing and Identifying Attributes of Shapes' },
+            { text: 'Session 2.6: Describing Quadrilaterals' }
+          ]
+        }
+      ]
+    },
+    {
+      text: 'Unit 3: Comparing and Combining Shapes', children: [
+        { text: 'Investigation 1: Composing and Decomposing 2-D Shapes' }]
+    }
+  ]
 
-  }
+
+
 
 }

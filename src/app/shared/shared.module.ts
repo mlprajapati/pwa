@@ -19,7 +19,7 @@ import { UserService } from '../services/user.service';
     ProgressCardComponent
   ],
 
-  imports:[CommonModule,NgbModule.forRoot(),SlickCarouselModule],
+  imports:[CommonModule, NgbModule.forRoot(),SlickCarouselModule],
   exports: [
     HeaderComponent,
     FooterComponent,

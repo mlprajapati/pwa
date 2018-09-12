@@ -19,4 +19,7 @@ export class HeaderComponent implements OnInit,OnDestroy  {
   ngOnDestroy(){
     this.headerSubscription.unsubscribe();
   }
+  openSearch(){
+    this.headerService.setSearchStatus(true);
+  }
 }

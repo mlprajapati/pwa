@@ -61,39 +61,26 @@
     z-index: 100;
     top: 0;
     left: 0;
-    
-  }
- 
-  .overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-    background-color: $black;
-    opacity: .1;
-    &.active {
-      display: block;
-    }
-  }
-
-  #sidebar {
-    min-width: 350px;
-    max-width: 350px;
-    min-height: 100vh;
-    background: $white;
-    color: $blue;
-    transition: all 0.3s;
-    margin-left: -350px;
+    width: 50%;
+    margin-left: -50%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     &.active {
       margin: 0;
     }
+  }
+ 
+  
+
+  #sidebar {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background: $white;
+    color: $blue;
+   
     .sidebar-header {
       font-size: 1.25rem;
       padding: .95rem;
@@ -145,12 +132,70 @@
     width: calc(100% - 25px);
     text-align: center;
   }
-   
-  @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -350px;
+  
+  .panel-heading{
+    color: #032356;
+    background-color: aliceblue;
+    .panel-title{
+      margin: 0;
+      line-height: 2.3em;
+      border-bottom: 1px solid #d2d2d2;
+      font-size: 0.9em;
+      font-weight: 500;
+      i{
+        color: #b8c6dd!important;
+        float: left;
+        margin: 10px;
+      }
+      div{
+        text-align: center;
+      }
     }
-    #sidebar.active {
+  }
+
+  .panel-group{
+    max-height: calc(100% - 55px);
+    overflow-y: auto;
+    height: calc(100% - 55px);
+  }
+  .panel-collapse{
+    line-height: 2.3em;
+    border-bottom: 1px solid #d2d2d2;
+    font-size: 0.8em;
+    margin-left: 15px;
+  }
+
+  .student-modal{
+    .header-container{
+      width:100%;
+    }
+    .sub-header{
+      background: red;
+      padding: 3px 15px;
+      color: #d2d2d2;
+      font-size: 0.8em;
+    }
+    .item-title{
+      color: #032356;
+      padding: 5px 0 0 15px;
+      border-bottom:1px solid #d2d2d2;
+    }
+    .back-btn{
+      padding: 15px;
+    }
+    
+  }
+  @media(max-width:768px) {
+    .wrapper {
+        width: 90%;
+        margin-left: -90%;
+    }
+
+    .wrapper.active {
         margin-left: 0;
     }
   }
+  
+  
+   
+

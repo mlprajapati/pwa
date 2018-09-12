@@ -1,114 +1,220 @@
-
 @import 'styles/colors';
-/* You can add global styles to this file, and also import other style files */
 :root {
     --input-padding-x: 1.5rem;
     --input-padding-y: .75rem;
-  }
-  
-  body {
-    /* background: #9CECFB;*/
-    color:$blue!important;
+}
+body {
+    color: $blue !important;
     background: $light-blue !important;
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); */ 
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     .form-control:focus {
-      
-      box-shadow: none;
-  }
-
-  .treeview-container{
-    padding:0px!important;
-    font-weight:normal;
-    .form-inline .form-check-input{
-      display: none;
+        box-shadow: none;
     }
-    .form-inline .form-check{
-      margin:auto!important;
-      font-size: .90rem !important;
+    section {
+        padding: 10px 0;
     }
-    .row-item{
-      line-height: 1.80rem;
-      margin:0px!important;
-      
-      border-bottom:1px solid #d2d2d2;
-      .fa{
-        margin-left:10px;
-      }
+    section .section-title {
+        text-align: center;
+        color: $blue;
+        margin-bottom: 50px;
     }
-    .treeview-item{
-      background-color: #fff;
-      margin-left:0px!important;
-      text-align: unset;
+    #tabs h6.section-title {
+        color: $blue;
     }
-  }
-
-  .pad-0{
-    padding:0 !important;
-  }
-  .btn:focus, .btn.focus,.btn:active {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem $blue;
-}
-
-  .form-label-group[_ngcontent-c1] > input[_ngcontent-c1], .form-label-group[_ngcontent-c1] > label[_ngcontent-c1] {
-   padding:0;
-}
-.page-container{
-  margin-top: 3.75rem;
-  height: calc(100% - 7.25rem);
-  max-height: calc(100% - 7.25rem);
-  overflow-y: auto;
-  width: 100%;
-  position: fixed;
-}
-.card-withot-border {
-  border: 0px;
-}
-.card-body-withot-padding{
-  padding: 0;
-}
-.section-header{
-  padding: 0.5rem 1.25rem;
-  margin-bottom: 0;
-  background-color:$blue;
-  border-bottom: 1px solid $blue;
-  color: $white;
-}
-.row-without-margin {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0px 0px 0px 0px;
-  width: 100%;
-  text-align: center;
-  
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 0px;
-  margin-left: 0px;  
-}
-  }
-  app-avatar{
-    .popover{
-      z-index: 98;
-      top: 50px !important;
-      right: 15px !important;
-      left:unset !important;
-      .arrow{
-        left:unset !important;
-        right: 14px !important;
-      }
-      .popover-body{
-        min-width: 12rem !important;
+    #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: $blue;
+        background-color: transparent;
+        border-color: transparent transparent $blue;
+        border-bottom: 4px solid !important;
+        font-size: 1rem;
+        font-weight: bold;
     }
+    #tabs .nav-tabs .nav-link {
+        border: 1px solid transparent;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        color: $blue;
+        font-size: 20px;
     }
-    
-  } 
-  
-
-
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+    .nav {
+        width: 50%;
+        text-align: center;
+        display: inline-flex;
+    }
+    .nav-link {
+        padding: 0;
+    }
+    .treeview-container {
+        padding: 0px!important;
+        font-weight: normal;
+        .form-inline .form-check-input {
+            display: none;
+        }
+        .form-inline .form-check {
+            margin: auto!important;
+            font-size: .90rem !important;
+        }
+        .row-item {
+            line-height: 1.80rem;
+            margin: 0px!important;
+            border-bottom: 1px solid #d2d2d2;
+            .fa {
+                margin-left: 10px;
+            }
+        }
+        .treeview-item {
+            background-color: #fff;
+            margin-left: 0px!important;
+            text-align: unset;
+        }
+    }
+    .pad-0 {
+        padding: 0 !important;
+    }
+    .btn:focus, .btn.focus, .btn:active {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem $blue;
+    }
+    .form-label-group[_ngcontent-c1] > input[_ngcontent-c1], .form-label-group[_ngcontent-c1] > label[_ngcontent-c1] {
+        padding: 0;
+    }
+    .page-container {
+        margin-top: 3.75rem;
+        height: calc(100% - 7.25rem);
+        max-height: calc(100% - 7.25rem);
+        overflow-y: auto;
+        width: 100%;
+        position: fixed;
+    }
+    .card-withot-border {
+        border: 0px;
+    }
+    .card-body-withot-padding {
+        padding: 0;
+    }
+    .section-header {
+        padding: 0.5rem 1.25rem;
+        margin-bottom: 0;
+        background-color: $blue;
+        border-bottom: 1px solid $blue;
+        color: $white;
+    }
+    .row-without-margin {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        text-align: center;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    app-avatar {
+        .popover {
+            z-index: 98;
+            top: 50px !important;
+            right: 15px !important;
+            left: unset !important;
+            .arrow {
+                left: unset !important;
+                right: 14px !important;
+            }
+            .popover-body {
+                min-width: 12rem !important;
+            }
+        }
+    }
+    .header {
+        background-color: $blue;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: $white;
+        text-align: center;
+        padding: 0rem;
+    }
+    .card-body {
+        flex: 1 1 auto;
+        padding: .5rem;
+    }
+    .header-title {
+        font-size: 1.75rem;
+    }
+    .serach-icon {
+        font-size: 2rem;
+        padding: .4rem;
+        right: 5rem;
+        position: absolute;
+        cursor: pointer;
+    }
+    .card {
+        border-radius: 0 !important;
+    }
+    .overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+        background-color: $black;
+        opacity: .1;
+        &.active {
+            display: block;
+        }
+    }
+    modal .modal {
+        align-items: start!important;
+        .modal-dialog {
+            width: 100%;
+            max-width: unset;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .modal-content {
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        .modal-body {
+            padding: unset;
+            padding-top: 3.4rem!important;
+        }
+        .modal-header {
+            background-color: #003156;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            padding: 0rem;
+        }
+    }
+    .modal.fade .modal-dialog {
+        transition: unset!important;
+        transition: unset!important;
+        transition: unset!important;
+        -webkit-transform: unset!important;
+        transform: unset!important;
+    }
+    @media (max-width:768px) {
+        .header {
+            text-align: left;
+        }
+        .nav {
+            width: 100%;
+        }
+    }
+}

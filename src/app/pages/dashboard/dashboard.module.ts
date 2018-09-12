@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
-import { TreeviewModule } from 'ngx-treeview';
-
+import { ModalModule } from 'angular-custom-modal';
+import { SearchComponent } from '../components/search/search.component';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: '**', component: DashboardComponent }
@@ -12,10 +13,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     SharedModule.forRoot(),
     RouterModule.forChild(routes),
-    TreeviewModule.forRoot()
+    ModalModule
   ],
-  declarations: [DashboardComponent]
+  declarations: [DashboardComponent,SearchComponent]
 })
 export class DashboardModule { }
