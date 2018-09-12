@@ -67,15 +67,33 @@
     <app-footer [activeClass]="'dashboard'"></app-footer>
     <div class="overlay" [ngClass]="{'active': toggleMenu}"></div>
     <div class="wrapper">
+
         <nav id="sidebar" [ngClass]="{'active': toggleMenu}">
             <div class="sidebar-header">
                 <span>Assessments</span> <span><a (click)="toggleSideBar()"><i class="fa fa-arrow-left back-arrow"></i></a></span>
-                
-                    
+                <!-- <h5>Assessments</h5> -->
+                <!-- <div class="pull-right">
+                    <a (click)="toggleSideBar()">&lt;Back</a>
+                </div> -->
+            </div>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" *ngFor="let itm of sideMenuData; let i = index" [attr.data-index]="i">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                                <i class="fa fa-chevron-down"></i>
+                            <div data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                                {{itm.text}}
+                                </div>
+                        </div>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in" *ngFor="let child of itm.children">
+                        <div class="panel-body">{{child.text}}</div>
+                    </div>
+                </div>
                 
             </div>
-            <ngx-treeview [config]="sidebarConfig" [items]="itCategory" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)">
-            </ngx-treeview>
+            <!--<ngx-treeview [config]="sidebarConfig" [items]="itCategory" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)">
+            </ngx-treeview>-->
         </nav>
         <!-- Sidebar -->
         <!--  <nav id="sidebar" [ngClass]="{'active': toggleMenu}">

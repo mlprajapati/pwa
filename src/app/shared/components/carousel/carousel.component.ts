@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
-
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
