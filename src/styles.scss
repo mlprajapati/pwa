@@ -17,6 +17,9 @@ body {
         color: $blue;
         margin-bottom: 50px;
     }
+    #tabs{
+        width: 100%;
+    }
     #tabs h6.section-title {
         color: $blue;
     }
@@ -36,7 +39,6 @@ body {
         font-size: 20px;
     }
     nav {
-        width: 100%;
         text-align: center;
     }
     .nav {
@@ -107,7 +109,6 @@ body {
         flex-wrap: wrap;
         padding: 0px 0px 0px 0px;
         width: 100%;
-        text-align: center;
     }
     .row {
         display: flex;

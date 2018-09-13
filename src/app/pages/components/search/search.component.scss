@@ -1,4 +1,13 @@
 @import '../../../../styles/colors';
+.thumbnail {
+  position: relative;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.thumbnail img {
+  width: 100%;
+}
 .search-icon{
     font-size: 1.75rem;
     padding: .4rem 0;
@@ -53,7 +62,10 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    
+    .col-12{
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+    }
     .sidebar-header {
         font-size: 1.25rem;
         padding: .7rem;
@@ -71,34 +83,44 @@
         }
       }
       ul {
+        padding: 0px;
+        list-style-type: none;
         &.components {
           padding: 20px 0;
         }
         p {
-          color: $white;
-          padding: 10px;
+          color: $grey;
+          padding: 10px 15px;
+          line-height: 0rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
         li {
           a {
-            padding: 10px;
+            padding: 0;
             font-size: 1.1em;
             display: block;
             cursor: pointer;
           }
+          span{
+            color: $red;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
         }
         li:hover,
         li.active {
-          color: $white !important;
-          background: #138496;
+          p{color: $white !important;}
+          background: $light-grey;
         }
         li.active>a,
         a[aria-expanded="true"] {
           color: $white !important;
           text-decoration: none;
         }
-        li.active>a>i {
-          color: $white !important;
-        }
+       
       }
       .back-arrow{
         position: absolute;
@@ -106,6 +128,7 @@
         padding-top: .2rem;
         cursor: pointer;
       }
+      
 }
 
 @media(max-width:768px) {
