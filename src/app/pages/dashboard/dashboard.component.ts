@@ -8,7 +8,6 @@ declare var $: any;
 })
 export class DashboardComponent implements OnInit {
   toggleAssessment = false;
-  toggleAssessment1 = false;
   toggleSearch = false;
   toggleMenu = false;
   sidebarConfig;
@@ -24,10 +23,6 @@ export class DashboardComponent implements OnInit {
       this.toggleSearch = false;
       this.toggleAssessment = !this.toggleAssessment;
   }
-  toggleMainModal(){
-    this.toggleAssessment1 = !this.toggleAssessment1;
-  }
-
 
   /**
    * sidebar menu dummy data. had to remove one get actual data
