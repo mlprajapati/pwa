@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
-import { ModalModule } from 'angular-custom-modal';
 import { SearchComponent } from '../components/search/search.component';
 import { FormsModule } from '@angular/forms';
 const routes: Routes = [
@@ -15,8 +14,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     SharedModule.forRoot(),
-    RouterModule.forChild(routes),
-    ModalModule
+    RouterModule.forChild(routes)
   ],
   declarations: [DashboardComponent,SearchComponent]
 })

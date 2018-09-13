@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../shared/components/header/header.service';
-
+declare var $: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,6 +8,7 @@ import { HeaderService } from '../../shared/components/header/header.service';
 })
 export class DashboardComponent implements OnInit {
   toggleAssessment = false;
+  toggleAssessment1 = false;
   toggleSearch = false;
   toggleMenu = false;
   sidebarConfig;
@@ -15,13 +16,16 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.headerService.setHeaderTitle('Dashboard');
-   
+
   }
 
   // toggle side menu bar
   toggleAssessSideBar() {
-    this.toggleSearch =false;
-    this.toggleAssessment = !this.toggleAssessment;
+      this.toggleSearch = false;
+      this.toggleAssessment = !this.toggleAssessment;
+  }
+  toggleMainModal(){
+    this.toggleAssessment1 = !this.toggleAssessment1;
   }
 
 
