@@ -9,6 +9,7 @@ declare var $: any;
 export class DashboardComponent implements OnInit {
   toggleAssessment = false;
   toggleSearch = false;
+  toggleAssessmentModal= false;
   toggleMenu = false;
   sidebarConfig;
   constructor(private headerService: HeaderService) { }
@@ -20,9 +21,15 @@ export class DashboardComponent implements OnInit {
 
   // toggle side menu bar
   toggleAssessSideBar() {
-      this.toggleSearch = false;
-      this.toggleAssessment = !this.toggleAssessment;
+    this.toggleSearch = false;
+    this.toggleAssessment = !this.toggleAssessment;
   }
+
+  openEditCommentModal(){
+    this.toggleAssessmentModal=!this.toggleAssessmentModal;
+  }
+
+  assessmentList = ['Quick Images (drawing shapes)', 'Shapes on the Geoboard', 'Shapes on Dot Paper', ''];
 
   /**
    * sidebar menu dummy data. had to remove one get actual data

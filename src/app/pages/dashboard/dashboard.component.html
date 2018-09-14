@@ -115,28 +115,9 @@
 
             </div>
         </nav>
-
-
-        <!--
-        <modal #htmlInsideModal class="student-modal">
-            <ng-template #modalHeader>
-                <div class="header-container">
-                    <span class="back-btn pull-left">Back</span>
-                    <div class="card-body"><span class="header-title">Assessment Checklist</span>
-
-                    </div>
-                </div>
-            </ng-template>
-            <ng-template #modalBody>
-                <div class="sub-header">
-                    Grade1 > Unit2 > Investigation2 > Session 2.4
-                </div>
-                <div class="item-title">A11: Constructing and Drawing 2-D Shapes</div>
-            </ng-template>
-            <ng-template #modalFooter></ng-template>
-        </modal>-->
     </div>
     <!-- Start of full page modal-->
+    <div class="overlay" [ngClass]="{'active': toggleAssessmentModal }"></div>
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -192,10 +173,9 @@
 
                                 </th>
                             </tr>
-
-                            <tr>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">Quick Images (drawing shapes)</div>
+                            <tr *ngFor="let itm of assessmentList">
+                                <td class="assessment-cell" data-toggle="modal" data-target="#edit-comment">
+                                    <div class="assessment-details" (click)="openEditCommentModal()">{{itm}}</div>
                                 </td>
                                 <td class="assessment-cell">
                                     <div class="assessment-details">
@@ -254,203 +234,30 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">Shapes on the Geoboard</div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">Shapes on Dot Paper</div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details"></div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="assessment-cell">
-                                    <div class="assessment-details">
-                                        <div class="comment-check">
-                                            <i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="add-comment">
-                                            Add comment
-                                        </div>
-                                        <div class="open-comment">
-                                            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-                                            <div><i class="fa fa-camera" aria-hidden="true"></i></div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
                         </table>
                     </div>
-
-
-
                 </div>
                 <div class=" footer"> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
             </div>
 
         </div>
-        
+
     </div>
-      <!-- end of full page modal-->
+    <!--Modal for uploading photo-->
+    <div class="modal" id="edit-comment" tabindex="-1" role="dialog" aria-labelledby="edit-comment-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="assessment-header">
+                        <div class="name-icon">AA</div>
+                        <span>Student A</span>
+                    </div>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!-- end of full page modal-->
     <app-search></app-search>
-  
+
 </div>
