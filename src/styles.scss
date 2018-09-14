@@ -176,6 +176,62 @@ body {
         }
     }
     
+    modal .modal {
+        align-items: start!important;
+        .modal-dialog {
+            width: 100%;
+            max-width: unset;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .modal-content {
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        .modal-body {
+            padding: unset;
+            padding-top: 3.4rem!important;
+        }
+        .modal-header {
+            background-color: #003156;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            padding: 0rem;
+        }
+    }
+    .modal.fade .modal-dialog {
+        transition: unset!important;
+        transition: unset!important;
+        transition: unset!important;
+        -webkit-transform: unset!important;
+        transform: unset!important;
+    }
+    .ass-item{
+        color: $red !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 5px;
+      }
+      .notes-item{
+        color: $green !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 5px;
+      }
+      .media-item{
+        color: $yellow !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 5px;
+      }
     @media (max-width:768px) {
         .header {
             text-align: left;

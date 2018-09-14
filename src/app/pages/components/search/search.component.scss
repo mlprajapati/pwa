@@ -8,6 +8,7 @@
 .thumbnail img {
   width: 100%;
 }
+
 .search-icon{
     font-size: 1.75rem;
     padding: .4rem 0;
@@ -103,12 +104,7 @@
             display: block;
             cursor: pointer;
           }
-          span{
-            color: $red;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
+          
         }
         li:hover,
         li.active {

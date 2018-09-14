@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
   centerMode: true,
   autoplaySpeed: 1000,
   variableWidth: true,
-  speed: 600};
+  speed: 1000};
 
 
 }
