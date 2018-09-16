@@ -1,0 +1,17 @@
+@import '../../../styles/colors';
+.report-card{
+    width: 20rem;
+    height: 20rem;
+    text-align: center;
+    border-radius: 10px !important;
+    box-shadow: 2px 2px 5px $grey !important;
+    cursor: pointer;
+    .iocn{
+        font-size: 4rem;
+        bottom: -50px;
+    }
+    .head-title{
+        font-size: 1.25rem;
+        padding-top: 20px;
+    }
+}
