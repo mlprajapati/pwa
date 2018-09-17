@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup,FormControl, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication.service';
 import { first } from 'rxjs/operators';
 import { LoggerService } from '../../shared/logger.service';
+import { TelemetryService } from '../../services/telemetry.service';
 
 
 @Component({
@@ -18,10 +19,12 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   returnUrl: string;
 
+
   constructor(private fb: FormBuilder, private route: ActivatedRoute,
     private router: Router,
-    private authenticationService: AuthenticationService) { 
-   
+    private authenticationService: AuthenticationService,
+    private telemetryService: TelemetryService) {
+
   }
 
   ngOnInit() {
@@ -30,29 +33,57 @@ export class LoginComponent implements OnInit {
       password: '',
     });
     this.authenticationService.logout();
-    
+
     this.returnUrl = 'pages/dashboard';
   }
   getErrorEmailMessage() {
     return this.email.hasError('required') ? 'Email is required' :
-        this.email.hasError('email') ? 'Not a valid email' :'';
+      this.email.hasError('email') ? 'Not a valid email' : '';
   }
-   getErrorPasswordMessage() {
-    return this.email.hasError('required') ? 'Password is required' :'';
+  getErrorPasswordMessage() {
+    return this.email.hasError('required') ? 'Password is required' : '';
   }
-  login(){
-    if(this.email.valid && this.password.valid){
+  login() {
+    if (this.email.valid && this.password.valid) {
       this.authenticationService.login(this.email.value, this.password.value)
-     
-      .subscribe(
+
+        .subscribe(
           data => {
-              this.router.navigate([this.returnUrl]);
+            let userIds = [];
+            console.log('userData===============', data);
+            this.telemetryService.getSectionList().subscribe(data => {
+
+              if (data["rosters"] && data["rosters"].length > 0) {
+                console.log(' this.sectionList=========', data["rosters"]);
+                data["rosters"].forEach(item => {
+                  userIds.push(item.studentIds);
+                });
+                userIds.filter((item, i) => {
+                  return userIds.indexOf(item) === i;
+                })
+                console.log('userids list', userIds);
+                if (userIds.length > 0) {
+                  this.telemetryService.getUsersDetails(userIds).subscribe(data => {
+                    console.log('user profileData', data);
+                  }, error => {
+                    console.log('error in getting user profile details');
+                  })
+                }
+              }
+            }, error => {
+              console.log('error in getting section data');
+            });
+
+
+
+            this.router.navigate([this.returnUrl]);
+
           },
           error => {
-              LoggerService.error(error,{});
+            LoggerService.error(error, {});
           });
 
-         
+
 
     }
   }
