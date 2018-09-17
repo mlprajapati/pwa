@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../../shared/components/header/header.service';
-declare var $: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
