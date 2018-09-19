@@ -1,3 +1,144 @@
-<p>
-  assessment-checklist works!
-</p>
+<!-- Start of full page modal-->
+<div class="overlay" [ngClass]="{'active': toggleAssessmentModal }"></div>
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-main-header">
+
+                <div class="card-body"> 
+                  <span data-dismiss="modal" style="cursor: pointer;"><i class="fa fa-angle-left back-icon" aria-hidden="true"></i>
+                  <span class="back-btn pull-left">Back</span></span>
+                  <span class="header-title">Assessment Checklist</span>
+
+                </div>
+
+            </div>
+            <div class="row row-without-margin sub-header"> Grade1 > Unit2 > Investigation2 > Session 2.4</div>
+            <div class="modal-body">
+
+                <div class="assessment-title">
+                    A11: Constructing and Drawing 2-D Shapes
+                </div>
+                <div class="assessment-grid-wrapper">
+                    <table class="assessment-grid">
+                        <tr>
+                            <th class="assessment-cell">
+                                <div class="assessment-header">
+
+                                </div>
+
+                            </th>
+                            <th class="assessment-cell">
+                                <div class="assessment-header">
+                                    <div class="name-icon">AA</div>
+                                    <span>Student A</span>
+                                </div>
+
+                            </th>
+                            <th class="assessment-cell">
+                                <div class="assessment-header">
+                                    <div class="name-icon">AA</div>
+                                    <span>Student A</span>
+                                </div>
+
+                            </th>
+                            <th class="assessment-cell">
+                                <div class="assessment-header">
+                                    <div class="name-icon">AA</div>
+                                    <span>Student A</span>
+                                </div>
+
+                            </th>
+                            <th class="assessment-cell">
+                                <div class="assessment-header">
+                                    <div class="name-icon">AA</div>
+                                    <span>Student A</span>
+                                </div>
+
+                            </th>
+                        </tr>
+                        <tr *ngFor="let itm of assessmentList">
+                            <td class="assessment-cell" data-toggle="modal" data-target="#edit-comment">
+                                <div class="assessment-details" (click)="openEditCommentModal()">{{itm}}</div>
+                            </td>
+                            <td class="assessment-cell">
+                                <div class="assessment-details">
+                                    <div class="comment-check">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="add-comment">
+                                        Add comment
+                                    </div>
+                                    <div class="open-comment">
+                                        <div><i class="fa fa-comment" aria-hidden="true"></i></div>
+                                        <div><i class="fa fa-camera" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="assessment-cell">
+                                <div class="assessment-details">
+                                    <div class="comment-check">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="add-comment">
+                                        Add comment
+                                    </div>
+                                    <div class="open-comment">
+                                        <div><i class="fa fa-comment" aria-hidden="true"></i></div>
+                                        <div><i class="fa fa-camera" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="assessment-cell">
+                                <div class="assessment-details">
+                                    <div class="comment-check">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="add-comment">
+                                        Add comment
+                                    </div>
+                                    <div class="open-comment">
+                                        <div><i class="fa fa-comment" aria-hidden="true"></i></div>
+                                        <div><i class="fa fa-camera" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="assessment-cell">
+                                <div class="assessment-details">
+                                    <div class="comment-check">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="add-comment">
+                                        Add comment
+                                    </div>
+                                    <div class="open-comment">
+                                        <div><i class="fa fa-comment" aria-hidden="true"></i></div>
+                                        <div><i class="fa fa-camera" aria-hidden="true"></i></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="footer"> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+        </div>
+
+    </div>
+
+</div>
+<!--Modal for uploading photo-->
+<div class="modal" id="edit-comment" tabindex="-1" role="dialog" aria-labelledby="edit-comment-modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="assessment-header">
+                    <div class="name-icon">AA</div>
+                    <span>Student A</span>
+                </div>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- end of full page modal-->
