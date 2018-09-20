@@ -10,7 +10,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         { id: 1, username: 'realize.demo', email: 'demo@gmail.com', password: 'testing123$' },
         { id: 2, username: 'krishna', email: 'kri@gmail.com', password: '12345' },
         { id: 3, username: 'madan', email: 'Madan@gmail.com', password: '12345' },
-        { id: 4, username: 'chitrang', email: 'Chitti', password: '12345' }
+        { id: 4, username: 'chittrang', email: 'chittrang@gmail.com', password: '12345' }
     ]
     constructor() { }
 
