@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { HeaderService } from '../../../shared/components/header/header.service';
+import { SharedService } from '../../../shared/shared.service';
 
 @Component({
   selector: 'app-search',
@@ -11,10 +11,10 @@ export class SearchComponent implements OnInit,OnDestroy {
   headerSubscription: Subscription;
   public searchKeyword:string='';
   public toggleSearch:boolean=false;
-  constructor(private headerService:HeaderService) { }
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit() {
-    this.headerSubscription = this.headerService.getSearchStatus().subscribe((res)=>{
+    this.headerSubscription = this.sharedService.getSearchStatus().subscribe((res)=>{
      this.openSearchSidebar();
     });
   }

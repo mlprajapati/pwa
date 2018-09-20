@@ -1,35 +1,39 @@
-<div class="card footer">
-  <div class="card-body " style="text-align:center;">
-
-    <div class="row">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 mx-auto align-center">
         <div class="icon-bar  flex-center">
-        <a class="icon-button" (click)="goToPage('notes')">
-              <i class="fa fa-file-text-o icon-footer" [ngClass]="{'active': activeClass=='notes'}"></i>
+          <div class="icon-box">
+            <a class="icon-button" (click)="goToPage('dashboard')">
+              <i class="icon-overview icon-footer" [ngClass]="{'active': activeClass=='dashboard'}"></i>
+              <p [ngClass]="{'active': activeClass=='dashboard'}">Dashboard</p>
+            </a>
+          </div>
+          <div class="icon-box">
+            <a class="icon-button" (click)="goToPage('notes')">
+              <i class="icon-PDF_alt icon-footer" [ngClass]="{'active': activeClass=='notes'}"></i>
               <p [ngClass]="{'active': activeClass=='notes'}">Notes</p>
-            </a>  
-        <a class="icon-button" (click)="goToPage('media')">
-                <i class="fa fa-video-camera icon-footer" [ngClass]="{'active': activeClass=='media'}"></i>
-                <p [ngClass]="{'active': activeClass=='media'}">Media</p>
-              </a>
-        <a class="icon-button" (click)="goToPage('dashboard')">
-                  <i class="fa fa-cubes icon-footer" [ngClass]="{'active': activeClass=='dashboard'}"></i>
-                  <p [ngClass]="{'active': activeClass=='dashboard'}">Dashboard</p>
-                </a>
-        <a class="icon-button" (click)="goToPage('report')">
-                    <i class="fa fa-bar-chart icon-footer" [ngClass]="{'active': activeClass=='reports'}"></i>
-                    <p [ngClass]="{'active': activeClass=='reports'}">Reports</p>
-                  </a>
-        <a class="icon-button" (click)="goToPage('student')">
-                      <i class="fa fa-users icon-footer" [ngClass]="{'active': activeClass=='students'}"></i>
-                      <p [ngClass]="{'active': activeClass=='students'}">Students</p>
-                    </a>
-        <a class="icon-button icon-right" (click)="triggerCamera()">
-            <i class="fa fa-camera icon-footer"></i>
-            <p>Camera</p>
-          </a>
+            </a>
+          </div>
+          <div class="icon-box"> 
+            <a class="icon-button" (click)="goToPage('media')">
+              <i class="icon-media_library icon-footer" [ngClass]="{'active': activeClass=='media'}"></i>
+              <p [ngClass]="{'active': activeClass=='media'}">Media</p>
+            </a>
+          </div>
+          <div class="icon-box">
+            <a class="icon-button" (click)="goToPage('report')">
+              <i class="icon-poll icon-footer" [ngClass]="{'active': activeClass=='reports'}"></i>
+              <p [ngClass]="{'active': activeClass=='reports'}">Reports</p>
+            </a>
+          </div>
+          <div class="icon-box"> 
+            <a class="icon-button" (click)="goToPage('student')">
+              <i class="icon-small_groups icon-footer" [ngClass]="{'active': activeClass=='students'}"></i>
+              <p [ngClass]="{'active': activeClass=='students'}">Students</p>
+            </a>
+          </div>
+          <div class="icon-box camera-capter">
+            <a class="icon-button" (click)="triggerCamera()">
+              <i class="icon-camera icon-footer"></i>
+              <p>Camera</p>
+            </a>
+          </div>
+       
         </div>
-      </div>
-    </div>
-  </div>
-</div>

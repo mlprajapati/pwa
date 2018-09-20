@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
+import { SharedService } from '../../shared.service';
 
 @Component({
   selector: 'app-avatar',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class AvatarComponent implements OnInit {
   name = '';
   username ='';
-  constructor(private currentUser:UserService, private router: Router,) { 
+  constructor(private currentUser:UserService, private router: Router,private sharedService:SharedService) { 
     let user = this.currentUser.getCurrentUser();
     this.name = user.firstName + ' ' + user.lastName;
     this.username = user.username;
@@ -28,6 +29,9 @@ export class AvatarComponent implements OnInit {
   }
   ngOnInit() {
     
+  }
+  openSearch(){
+    this.sharedService.setSearchStatus(true);
   }
 
 }

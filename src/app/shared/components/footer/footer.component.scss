@@ -6,6 +6,9 @@
     bottom:0;
     width: 100%;
 }
+.camera-capter{
+    display: block;
+}
 .pb-5, .py-5 {
     padding-bottom: 1rem !important;
     padding-top: 1rem !important;
@@ -23,8 +26,13 @@
     width: 100%;
 }
 .icon-bar {
-    width: 100%;
-    overflow: auto;
+    overflow: hidden;
+    width: 62px;	
+    background-color: #FBFDFD;	
+    box-shadow: 1px 0 4px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    top:44px;
+    height: calc(100vh - 44px);
 }
 .icon-bar a {
     cursor: pointer;
@@ -33,8 +41,15 @@
     padding: 0;
     transition: all 0.3s ease;
     color: white;
-    font-size: 25px;
     float:left;
+}
+.icon-box {	
+    height: 62px;
+    width: 60px;
+    /* box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.2); */
+    margin-bottom: 11px;
+    padding-top: 15px;
+    margin-left: 0px;
 }
 .icon-right{
     right: 50px;
@@ -42,22 +57,28 @@
 }
 
 .icon-button p{
-    color: gray;
-    font-size: .5rem;
-    padding: 0;
-    line-height: 0;
+    color: $dark-grey;	
+    font-family: Cabin;	
+    font-size: 12px;	
+    line-height: 12px;	
+    text-align: center;
 }
 .icon-button p.active{
-    color: $blue;
+    color: $sine-blue;
     
 }
 
 .icon-footer{
-    font-size: 1.5rem;
-    color:gray;
+    height: 25px;	
+    width: 24px;	
+    color: $dark-grey;	
+    font-family: k12_universal_icons;	
+    font-size: 24px;	
+    line-height: 25px;	
+    text-align: center;
 }
 .icon-footer.active{
-    color:$blue;
+    color:$sine-blue;
 }
 .align-right{
     text-align: right;
@@ -70,6 +91,26 @@
         right: 20px;
         position: absolute;
     }
+    .icon-bar {
+        overflow: hidden;
+        height: 62px;	
+        background-color: #FBFDFD;	
+        box-shadow: 1px 0 4px 0 rgba(0,0,0,0.2);
+        position: absolute;
+        top:calc(100vh - 72px);
+        width:100%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+    }
+    .icon-box {
+        float: left;
+        width:20%;
+    }
+    .camera-capter{
+        display: none;
+    }
+
 }
 
   

@@ -1,22 +1,52 @@
 @import '../../../../styles/colors';
 .avatar{
-    font-size: 2rem;
-    padding: .4rem;
-    right: 1.5rem;
+    right: 9px;
     position: absolute;
     cursor: pointer;
+    top: 0px;
 }
+.icon-assessments{
+    display: block;
+ }
+.icon-bullet_list{
+        display: none;
+}
+
 .user{
-    font-size: 1.25rem;
+    color: #9B9B9B;
+    font-size: 16px;	line-height: 26px; 
 }
 .currentuser{
-    font-size: .75rem;
-    color: lightgray;
-    line-height: 10px;
+    color: #9B9B9B;
+    font-size: 12px;	line-height: 18px;
 }
 .avatar-link{
     padding: 12px 0 0 0;
     font-weight: bold;
-    color: $blue;
+    color: #F9F9F9;
     cursor: pointer;
+}
+.popover-body{
+    color: #9B9B9B;	font-family: Cabin;
+    background-color: $white !important;	
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+.search-item{
+    display: none;
+}
+@media (max-width: 768px) {
+     .icon-bullet_list{
+        display: block;
+     }
+     .icon-assessments{
+        display: none;
+     }
+     .search-item{
+        display: block;
+    }
+    .avatar-link{
+       
+        color: $black;
+        
+    }
 }

@@ -10,25 +10,46 @@
 }
 
 .search-icon{
-    font-size: 1.75rem;
-    padding: .4rem 0;
+    padding: 9px;
     position: absolute;
-    color: $white;
+    height: 25px;	
+    width: 26px;	
+    color: #F9F9F9;	
+    font-family: k12_universal_icons;	
+    font-size: 24px;	
+    line-height: 25px;
+    display: block;
 }
 .search-box{
     width: 1rem;
-    padding-left: 2rem;
+    padding-left: 46px;
+}
+.enter-keyword-to-sea {	
+  color: #E0E9EF;	
+  font-family: Cabin;	
+  font-size: 18px;	
+  font-style: italic;	
+  letter-spacing: 0.45px;	
+  line-height: 22px;
+  position: relative;
+  top: 4px;
+  margin-right: 115px; 
 }
 .clear-btn{
     cursor: pointer;
     float: right;
     position: absolute;
-    right: -50px;
-    font-size: 1rem;
-    line-height: 2.5rem;
+    height: 22px;	
+    width: 42px;	
+    color: #FBFDFD;	
+    font-family: Cabin;	
+    font-size: 18px;	
+    letter-spacing: 0.45px;	
+    line-height: 22px;
+    right:54px;
+    top: 12px;
 }
 .form-control, .form-control:focus {
-    color: $white;
     background-color:transparent;
     border-color:none;
     border:none;
@@ -63,14 +84,16 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    top: 0px;
+    position: absolute;
     .col-12{
       padding-right: 0px !important;
       padding-left: 0px !important;
     }
     .sidebar-header {
-        font-size: 1.25rem;
-        padding: .7rem;
-        background: $blue;
+        height: 44px;		
+        background-color: #004168;	
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
         color:$white;
         text-align: left;
         .input-group {
@@ -129,10 +152,15 @@
 
 @media(max-width:768px) {
     #wrapper {
-        width: 90%;
-        margin-right: -90%;
+        width: 100%;
+        margin-right: -100%;
     }
     #wrapper.active {
         margin-right: 0;
     }
+    #sidebar-wrapper{
+      top: 56px;
+
+  }
+
 }

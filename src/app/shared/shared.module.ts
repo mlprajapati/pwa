@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from '../services/user.service';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [HeaderService,UserService
+      providers: [HeaderService,UserService,SharedService
         
       ]
     };

@@ -1,9 +1,15 @@
-<i class="fa fa-user-circle-o avatar" [placement]="'bottom'" [ngbPopover]="popContent"
+<div   ><i class="icon-assessments avatar header-icon" [placement]="'bottom'" [ngbPopover]="popContent"
 triggers="manual" #p1="ngbPopover" (click)="toggleWithGreeting(p1)"></i>
+<i class="icon-bullet_list icon-listed_information avatar header-icon" [placement]="'bottom'" [ngbPopover]="popContent"
+triggers="manual" #p2="ngbPopover" (click)="toggleWithGreeting(p2)"></i>
+</div>
+
 <ng-template #popContent let-greeting="greeting">
     <div class="user">{{name}}</div>
     <div class="currentuser">{{username}}</div>
-    <div class="avatar-link"><a  (click)="logout()">Log Out</a></div>
+    <div class="avatar-link search-item"><a  (click)="openSearch()">Search</a></div>
     <div class="avatar-link"><a  (click)="openFaq()">FAQs</a></div>
+    <div class="avatar-link"><a  (click)="logout()">Log Out</a></div>
+    
 </ng-template>
 

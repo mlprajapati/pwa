@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HeaderService } from './header.service';
 import { Subscription } from 'rxjs';
+import { SharedService } from '../../shared.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit,OnDestroy  {
   headerSubscription: Subscription;
   headerTitle:string = '';
-  constructor(private headerService:HeaderService) { 
+  constructor(private headerService:HeaderService,private sharedService:SharedService) { 
     this.headerSubscription = this.headerService.headerTitle().subscribe(title=>this.headerTitle=title);
   }
 
@@ -20,6 +21,6 @@ export class HeaderComponent implements OnInit,OnDestroy  {
     this.headerSubscription.unsubscribe();
   }
   openSearch(){
-    this.headerService.setSearchStatus(true);
+    this.sharedService.setSearchStatus(true);
   }
 }

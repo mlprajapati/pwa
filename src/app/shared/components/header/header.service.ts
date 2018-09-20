@@ -4,7 +4,6 @@ import { Observable, Subject } from 'rxjs';
 @Injectable()
 export class HeaderService {
     private _headerTitle = new Subject<any>();
-    private _searchStatus = new Subject<any>();
     constructor(){
         
     }
@@ -16,12 +15,5 @@ export class HeaderService {
           this._headerTitle.next(title);
        
       }
-    getSearchStatus() {
-        return this._searchStatus.asObservable();
-    }
-    setSearchStatus(title) {
-
-          this._searchStatus.next(title);
-       
-      }
+    
 }

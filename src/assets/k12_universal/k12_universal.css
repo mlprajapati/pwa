@@ -1,0 +1,683 @@
+@font-face {
+  font-family: 'k12_universal_icons';
+  src:  url('fonts/k12_universal_icons.eot?v1.51.0');
+  src:  url('fonts/k12_universal_icons.eot?v1.51.0#iefix') format('embedded-opentype'),
+    url('fonts/k12_universal_icons.ttf?v1.51.0') format('truetype'),
+    url('fonts/k12_universal_icons.woff?v1.51.0') format('woff'),
+    url('fonts/k12_universal_icons.svg?v1.51.0#k12_universal_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'k12_universal_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-observational_assessment-inverted:before {
+  content: "\e956";
+}
+.icon-comments_bubble:before {
+  content: "\e966";
+}
+.icon-credits:before {
+  content: "\e965";
+}
+.icon-st_century_skills:before {
+  content: "\e600";
+}
+.icon-audio:before {
+  content: "\e601";
+}
+.icon-author:before {
+  content: "\e602";
+}
+.icon-calendar:before {
+  content: "\e603";
+}
+.icon-checklist:before {
+  content: "\e604";
+}
+.icon-full_class:before {
+  content: "\e605";
+}
+.icon-common_core:before {
+  content: "\e606";
+}
+.icon-minutes_sixty:before {
+  content: "\e607";
+}
+.icon-differentiation:before {
+  content: "\e608";
+}
+.icon-close_read:before {
+  content: "\e609";
+}
+.icon-game_2:before {
+  content: "\e60a";
+}
+.icon-learner_level_one:before {
+  content: "\e60b";
+}
+.icon-learner_level_two:before {
+  content: "\e60c";
+}
+.icon-learner_level_three:before {
+  content: "\e60d";
+}
+.icon-professional_development:before {
+  content: "\e60e";
+}
+.icon-student_activity_book:before {
+  content: "\e60f";
+}
+.icon-discussion:before {
+  content: "\e610";
+}
+.icon-present:before {
+  content: "\e611";
+}
+.icon-error_intervention:before {
+  content: "\e612";
+}
+.icon-essential_question:before {
+  content: "\e613";
+}
+.icon-focus_coherence_rigor:before {
+  content: "\e614";
+}
+.icon-glossary:before {
+  content: "\e615";
+}
+.icon-goal:before {
+  content: "\e616";
+}
+.icon-key_concept:before {
+  content: "\e617";
+}
+.icon-download:before {
+  content: "\e618";
+}
+.icon-less:before {
+  content: "\e619";
+}
+.icon-bullet_list:before {
+  content: "\e61a";
+}
+.icon-math_words_ideas:before {
+  content: "\e61b";
+}
+.icon-more:before {
+  content: "\e61c";
+}
+.icon-myWorld:before {
+  content: "\e61d";
+}
+.icon-next_gen_science:before {
+  content: "\e61e";
+}
+.icon-notebook:before {
+  content: "\e61f";
+}
+.icon-other_strategies:before {
+  content: "\e620";
+}
+.icon-poll:before {
+  content: "\e621";
+}
+.icon-response_to_intervention:before {
+  content: "\e622";
+}
+.icon-rubric:before {
+  content: "\e623";
+}
+.icon-stem:before {
+  content: "\e624";
+}
+.icon-lab:before {
+  content: "\e625";
+}
+.icon-various_uses_info:before {
+  content: "\e626";
+}
+.icon-teacher_support:before {
+  content: "\e627";
+}
+.icon-virtual_nerd:before {
+  content: "\e628";
+}
+.icon-word_network:before {
+  content: "\e629";
+}
+.icon-activity:before {
+  content: "\e62a";
+}
+.icon-assessment:before {
+  content: "\e62b";
+}
+.icon-game:before {
+  content: "\e62c";
+}
+.icon-letter:before {
+  content: "\e62d";
+}
+.icon-show:before {
+  content: "\e62e";
+}
+.icon-PDF:before {
+  content: "\e62f";
+}
+.icon-portfolio:before {
+  content: "\e630";
+}
+.icon-reading:before {
+  content: "\e631";
+}
+.icon-tools:before {
+  content: "\e632";
+}
+.icon-video:before {
+  content: "\e633";
+}
+.icon-virtual_lab:before {
+  content: "\e634";
+}
+.icon-practice_homework:before {
+  content: "\e635";
+}
+.icon-individuals:before {
+  content: "\e636";
+}
+.icon-small_groups:before {
+  content: "\e637";
+}
+.icon-pairs:before {
+  content: "\e638";
+}
+.icon-minutes_five:before {
+  content: "\e639";
+}
+.icon-minutes_ten:before {
+  content: "\e63a";
+}
+.icon-minutes_fifteen:before {
+  content: "\e63b";
+}
+.icon-minutes_twenty:before {
+  content: "\e63c";
+}
+.icon-minutes_twenty_five:before {
+  content: "\e63d";
+}
+.icon-minutes_thirty:before {
+  content: "\e63e";
+}
+.icon-minutes_thirty_five:before {
+  content: "\e63f";
+}
+.icon-minutes_forty:before {
+  content: "\e640";
+}
+.icon-minutes_forty_five:before {
+  content: "\e641";
+}
+.icon-minutes_fifty:before {
+  content: "\e642";
+}
+.icon-minutes_fifty_five:before {
+  content: "\e643";
+}
+.icon-go_online:before {
+  content: "\e645";
+}
+.icon-open_activity:before {
+  content: "\e646";
+}
+.icon-nn_fifteen:before {
+  content: "\e647";
+}
+.icon-nn_fifty_five:before {
+  content: "\e648";
+}
+.icon-nn_fifty:before {
+  content: "\e649";
+}
+.icon-nn_five:before {
+  content: "\e64a";
+}
+.icon-nn_forty_five:before {
+  content: "\e64b";
+}
+.icon-nn_forty:before {
+  content: "\e64c";
+}
+.icon-nn_sixty:before {
+  content: "\e64d";
+}
+.icon-nn_ten:before {
+  content: "\e64e";
+}
+.icon-nn_thirty_five:before {
+  content: "\e64f";
+}
+.icon-nn_thirty:before {
+  content: "\e650";
+}
+.icon-nn_twenty_five:before {
+  content: "\e651";
+}
+.icon-nn_twenty:before {
+  content: "\e652";
+}
+.icon-print:before {
+  content: "\e653";
+}
+.icon-observational_assessment:before {
+  content: "\e654";
+}
+.icon-submit:before {
+  content: "\e655";
+}
+.icon-cards:before {
+  content: "\e656";
+}
+.icon-annotate:before {
+  content: "\e657";
+}
+.icon-highlight_notes:before {
+  content: "\e658";
+}
+.icon-bookshelf:before {
+  content: "\e659";
+}
+.icon-bookmark_selected:before {
+  content: "\e65a";
+}
+.icon-highlight:before {
+  content: "\e65b";
+}
+.icon-table_of_contents:before {
+  content: "\e65c";
+}
+.icon-bookmark_unselected:before {
+  content: "\e65d";
+}
+.icon-menu_open:before {
+  content: "\e65e";
+}
+.icon-go_back:before {
+  content: "\e65f";
+}
+.icon-add_note:before {
+  content: "\e660";
+}
+.icon-checkmark:before {
+  content: "\e661";
+}
+.icon-menu_option:before {
+  content: "\e662";
+}
+.icon-breadcrumb:before {
+  content: "\e663";
+}
+.icon-menu_close:before {
+  content: "\e664";
+}
+.icon-search:before {
+  content: "\e665";
+}
+.icon-settings:before {
+  content: "\e666";
+}
+.icon-expired_book:before {
+  content: "\e667";
+}
+.icon-fav_book_not_selected:before {
+  content: "\e668";
+}
+.icon-fav_book_selected:before {
+  content: "\e669";
+}
+.icon-info:before {
+  content: "\e66a";
+}
+.icon-avatar_down:before {
+  content: "\e66b";
+}
+.icon-offline_wifi:before {
+  content: "\e66c";
+}
+.icon-offline_exclamation:before {
+  content: "\e66d";
+}
+.icon-PDF_alt:before {
+  content: "\e66e";
+}
+.icon-letter_alt:before {
+  content: "\e66f";
+}
+.icon-annotation_mark:before {
+  content: "\e946";
+}
+.icon-speak_record:before {
+  content: "\e900";
+}
+.icon-globe_international:before {
+  content: "\e901";
+}
+.icon-delete:before {
+  content: "\e902";
+}
+.icon-undo:before {
+  content: "\e903";
+}
+.icon-about_author:before {
+  content: "\e905";
+}
+.icon-adaptivity:before {
+  content: "\e904";
+}
+.icon-basket_text:before {
+  content: "\e906";
+}
+.icon-basket_media:before {
+  content: "\e907";
+}
+.icon-basket_image:before {
+  content: "\e908";
+}
+.icon-cards2:before {
+  content: "\e909";
+}
+.icon-overview:before {
+  content: "\e90b";
+}
+.icon-portfolio2:before {
+  content: "\e90c";
+}
+.icon-inbox:before {
+  content: "\e90d";
+}
+.icon-unit_manager:before {
+  content: "\e90e";
+}
+.icon-dashboard:before {
+  content: "\e90f";
+}
+.icon-camera:before {
+  content: "\e910";
+}
+.icon-work:before {
+  content: "\e911";
+}
+.icon-ela:before {
+  content: "\e912";
+}
+.icon-math:before {
+  content: "\e913";
+}
+.icon-reports:before {
+  content: "\e914";
+}
+.icon-assessments:before {
+  content: "\e915";
+}
+.icon-kick_off:before {
+  content: "\e916";
+}
+.icon-teacher_guide:before {
+  content: "\e917";
+}
+.icon-lightbulb:before {
+  content: "\e918";
+}
+.icon-media_library:before {
+  content: "\e919";
+}
+.icon-hide:before {
+  content: "\e91a";
+}
+.icon-play:before {
+  content: "\e91b";
+}
+.icon-pause:before {
+  content: "\e91c";
+}
+.icon-exit:before {
+  content: "\e91d";
+}
+.icon-realize_reader:before {
+  content: "\e91e";
+}
+.icon-refresh:before {
+  content: "\e91f";
+}
+.icon-chevron:before {
+  content: "\e920";
+}
+.icon-chevron_double:before {
+  content: "\e921";
+}
+.icon-clock:before {
+  content: "\e922";
+}
+.icon-lock:before {
+  content: "\e923";
+}
+.icon-unlock:before {
+  content: "\e924";
+}
+.icon-assessment_reset:before {
+  content: "\e925";
+}
+.icon-minus:before {
+  content: "\e926";
+}
+.icon-my_content:before {
+  content: "\e927";
+}
+.icon-spinner:before {
+  content: "\e928";
+}
+.icon-help_marker:before {
+  content: "\e929";
+}
+.icon-maximize:before {
+  content: "\e92a";
+}
+.icon-minimize:before {
+  content: "\e92b";
+}
+.icon-grade_selector:before {
+  content: "\e92c";
+}
+.icon-mute:before {
+  content: "\e92d";
+}
+.icon-filter:before {
+  content: "\e92e";
+}
+.icon-closed_caption_alt:before {
+  content: "\e92f";
+}
+.icon-annotations:before {
+  content: "\e930";
+}
+.icon-sort:before {
+  content: "\e931";
+}
+.icon-graph_line:before {
+  content: "\e932";
+}
+.icon-background:before {
+  content: "\e933";
+}
+.icon-bold:before {
+  content: "\e934";
+}
+.icon-close:before {
+  content: "\e935";
+}
+.icon-cursor:before {
+  content: "\e936";
+}
+.icon-assign:before {
+  content: "\e937";
+}
+.icon-divide:before {
+  content: "\e938";
+}
+.icon-drive_link:before {
+  content: "\e939";
+}
+.icon-eraser:before {
+  content: "\e93a";
+}
+.icon-font_large:before {
+  content: "\e93b";
+}
+.icon-font_medium:before {
+  content: "\e93c";
+}
+.icon-font_size:before {
+  content: "\e93d";
+}
+.icon-font_small:before {
+  content: "\e93e";
+}
+.icon-greater_than_equal:before {
+  content: "\e93f";
+}
+.icon-italic:before {
+  content: "\e940";
+}
+.icon-less_than_equal:before {
+  content: "\e941";
+}
+.icon-link:before {
+  content: "\e942";
+}
+.icon-math_symbols:before {
+  content: "\e943";
+}
+.icon-media_items:before {
+  content: "\e944";
+}
+.icon-multiply:before {
+  content: "\e945";
+}
+.icon-esp_math_words_ideas:before {
+  content: "\e90a";
+}
+.icon-equals:before {
+  content: "\e947";
+}
+.icon-numbered_list:before {
+  content: "\e948";
+}
+.icon-pencil:before {
+  content: "\e949";
+}
+.icon-pi:before {
+  content: "\e94a";
+}
+.icon-redo:before {
+  content: "\e94b";
+}
+.icon-snapshot_tool:before {
+  content: "\e94c";
+}
+.icon-square_root:before {
+  content: "\e94d";
+}
+.icon-stamp:before {
+  content: "\e94e";
+}
+.icon-text_color:before {
+  content: "\e94f";
+}
+.icon-text_tools:before {
+  content: "\e950";
+}
+.icon-ToC:before {
+  content: "\e951";
+}
+.icon-underline:before {
+  content: "\e952";
+}
+.icon-undo2:before {
+  content: "\e953";
+}
+.icon-ban:before {
+  content: "\e954";
+}
+.icon-launch:before {
+  content: "\e955";
+}
+.icon-online_wifi:before {
+  content: "\e957";
+}
+.icon-early_learning:before {
+  content: "\e958";
+}
+.icon-avatar_up:before {
+  content: "\e95a";
+}
+.icon-arrow_left:before {
+  content: "\e95b";
+}
+.icon-arrow_right:before {
+  content: "\e95c";
+}
+.icon-backpack:before {
+  content: "\e95d";
+}
+.icon-closed_caption2:before {
+  content: "\e95e";
+}
+.icon-share:before {
+  content: "\e95f";
+}
+.icon-remediation:before {
+  content: "\e960";
+}
+.icon-edit:before {
+  content: "\e961";
+}
+.icon-percentage:before {
+  content: "\e962";
+}
+.icon-subtraction:before {
+  content: "\e963";
+}
+.icon-addition:before {
+  content: "\e964";
+}
+.icon-greater_than:before {
+  content: "\e971";
+}
+.icon-less_than:before {
+  content: "\e972";
+}
+.icon-closed_caption:before {
+  content: "\e959";
+}
+.icon-avatar_right:before {
+  content: "\e97a";
+}
+.icon-avatar_left:before {
+  content: "\e97b";
+}
+.icon-english_language_learner:before {
+  content: "\e992";
+}
