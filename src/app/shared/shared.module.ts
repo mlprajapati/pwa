@@ -10,6 +10,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from '../services/user.service';
 import { SharedService } from './shared.service';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,16 +19,17 @@ import { SharedService } from './shared.service';
     FooterComponent,
     AvatarComponent,
     CarouselComponent,
-    ProgressCardComponent
+    ProgressCardComponent,
+    DatepickerComponent
   ],
 
-  imports:[CommonModule, NgbModule.forRoot(),SlickCarouselModule],
+  imports:[CommonModule,FormsModule, ReactiveFormsModule, NgbModule.forRoot(),SlickCarouselModule],
   exports: [
     HeaderComponent,
     FooterComponent,
     AvatarComponent,
     CarouselComponent,
-    ProgressCardComponent
+    ProgressCardComponent,DatepickerComponent
   ]
 })
 

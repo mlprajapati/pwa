@@ -1,6 +1,84 @@
 <app-header></app-header>
-<div class="page-container">
-  notes
+<div class="container-flud">
+  <div class="page-container">
+    <div class="top-nav col-md-12 col-sm-12 col-12">
+      <div class="btn-group btn-group-toggle toggle-btn col-md-4 col-sm-12 col-10" style="" data-toggle="buttons">
+        <label class="btn btn-light labelRadio active"  #option1>
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> All Notes
+        </label>
+        <label class="btn btn-light labelRadio" (click)="toggleAssessSideBar()" #option2>
+          <input type="radio" name="options" id="option2" autocomplete="off"> To-Do's
+        </label>
+      </div>
+      <div class="addNote">
+        <i class="fa fa-plus"></i>
+        <span>Add Note</span>
+      </div>
+    </div>
+    <!-- Edit Div -->
+    <div class="bottom-div">
+      <div class="edit" (click)="enableEdit()">
+        <h5><i class="fa fa-pencil"></i>
+          Edit</h5>
+      </div>
+      <div class="bottom-div-table">
+        <div class="custom-control custom-checkbox" style="float:left;">
+          <input type="checkbox" class="custom-control-input" id="customCheck1">
+          <label [ngClass]="{'custom-control-label': enableCheckboxes}" for="customCheck1" (click)="checked(checkedColumn)" ></label>
+        </div>
+        <div style="float: left;
+          margin-right: 2%;width:100px;">
+          <span class="todoSpan">To-Do</span>
+          <span class="dueSpan">Due dd/mm</span>
+        </div>
+        <div>
+          <span #checkedColumn>{{plainText}} </span>
+        </div>
+        <!-- <ng-template #nonEditable><label>{{plainText}}</label>  </ng-template> -->
+
+      </div>
+    </div>
   </div>
+</div>
 <app-footer [activeClass]="'notes'"></app-footer>
+<div class="overlay" (click)="toggleAssessSideBar(option1,option2)" [ngClass]="{'active': toggleAssessment }"></div>
+<div class="wrapper" [ngClass]="{'active': toggleAssessment}">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <span>Add Note</span>
+      <span style="float:right;cursor: pointer;" (click)="toggleAssessSideBar(option1,option2)">Done</span>
+      <!-- <span><a (click)="toggleAssessSideBar()"><i class="fa fa-arrow-left back-arrow"></i></a></span> -->
+
+    </div>
+    <div style="margin:1%">
+      <div class="form-group btmborder">
+        <!-- <label for="exampleFormControlTextarea1"></label> -->
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type Note"></textarea>
+      </div>
+      <div class="form-group btmborder">
+        <span class="toDo">To-Do: </span>
+        <label class="bs-switch">
+          <input type="checkbox" checked="">
+          <span class="slider round"></span>
+        </label>
+        <div>
+          <span class="datePickerText">Due:</span>
+          <span>
+            <ngb-datepicker></ngb-datepicker>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5 style="width: 100%;text-align: left;">Tag Students</h5>
+        <div style="text-align: left">
+          <div class="custom-control custom-checkbox" *ngFor="let student of students">
+            <input type="checkbox" class="custom-control-input" id="{{student}}">
+            <label class="custom-control-label" for="{{student}}"> {{student}} </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</div>
 <app-search></app-search>
