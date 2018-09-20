@@ -1,10 +1,9 @@
-
- <!--<div class="row">
+<!--<div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card card-signin">
         <div class="card-body">
           <div class="login-header-img mb-3">
-            <img src="../../../assets/images/scout_login.png">
+            <img src="../../../assets/images/header-logo.png">
           </div>
           <form class="form-signin" [formGroup]="loginForm">
             <div class="form-label-group">
@@ -37,59 +36,46 @@
 
 -->
 <!--Starting latest design code-->
-<div class="container-fluid">
-  <div class="row imageCss">
-      <!-- <div class="col-md-2"></div> -->
-       <div class="col-md-12">
-        <img src=".\assets\images\companyName.PNG" id="companyLogo">
-        </div>        
-        <!-- <div class="col-md-3"></div> -->
-  </div>
-  <!--division for body-->
-  <div class="row second">
-      <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <div class="row">
-              
-              <div class="col-md-12">
-                <form class="form-signin" [formGroup]="loginForm">
-              
-                    <div class="form-group">
-                      <input type="email" id="inputEmail" [formControl]="email" class="form-control" placeholder="user name ..." required autofocus>
-                      <!--<div *ngIf="email.invalid">{{getErrorEmailMessage()}}</div> -->
-                    </div>
-          
-                    <div class="form-group">
-                      <input type="password" id="password" [formControl]="password" class="form-control" placeholder="password ..." required autofocus>
-                      <!-- <div *ngIf="password.invalid">{{getErrorPasswordMessage()}}</div>-->
-                    </div>
-              
-                    <br>
-                
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary form-control" >Sign in</button>
-                    </div>
-                </form>
-                <div style="text-align: center;"><p><b>EasyBridge Auto or Plus Account?</b></p></div>
-              </div>
-            </div>
-          </div>
-      <div class="col-md-3"></div>
-      
-      </div>  
-      <!-- <div class="row" style="width:0;margin-left:90;"></div> -->
-     
-      <div class="row">
-         <div class="col-md-3" id="row-col-third-3">
-        </div> 
-        
-        <div class="col-md-9" >
-           <div class="row" id="row-col-third-9">
-              <p style="font-size: 0.8rem;">
-              Note: The Pearson Scout app requires a school-based 
-              subscription and a valid Pearson account.
-              </p>
-            </div>
-        </div>  
-      </div>
+<div>
+  <!-- <div class="col-md-2"></div> -->
+
+  <img class="header-logo" src=".\assets\images\header-logo.png" id="companyLogo">
+  <!-- <div class="col-md-3"></div> -->
 </div>
+<div class="container-fluid login-form-container">
+
+  <!--division for body-->
+  <div class="row">
+    <div class="col-md-4 col-md-4"></div>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <form class="form-signin">
+
+        <div class="form-group">
+          <input type="email" id="inputEmail" [formControl]="email" class="form-control" placeholder="user name ..."
+            required autofocus>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="password" [formControl]="password" class="form-control" placeholder="password ..."
+            required autofocus>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary form-control">Sign in</button>
+        </div>
+      </form>
+      <div style="text-align: center;">
+        <p><b>EasyBridge Auto or Plus Account?</b></p>
+      </div>
+
+    </div>
+    <div class="col-md-4 col-lg-4"></div>
+
+  </div>
+
+  <div class="disclaimer">
+    <p>
+      Note: The Pearson Scout app requires a school-based
+      subscription and a valid Pearson account.
+    </p>
+  </div>
