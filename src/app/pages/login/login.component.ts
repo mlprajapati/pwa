@@ -13,7 +13,7 @@ import { TelemetryService } from '../../services/telemetry.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  username = new FormControl('', [Validators.required]);
   password = new FormControl('', [Validators.required]);
   hide = true;
   loginForm: FormGroup;
@@ -37,15 +37,15 @@ export class LoginComponent implements OnInit {
     this.returnUrl = 'pages/dashboard';
   }
   getErrorEmailMessage() {
-    return this.email.hasError('required') ? 'Email is required' :
-      this.email.hasError('email') ? 'Not a valid email' : '';
+    return this.username.hasError('required') ? 'Email is required' :
+      this.username.hasError('email') ? 'Not a valid email' : '';
   }
   getErrorPasswordMessage() {
-    return this.email.hasError('required') ? 'Password is required' : '';
+    return this.username.hasError('required') ? 'Password is required' : '';
   }
   login() {
-    if (this.email.valid && this.password.valid) {
-      this.authenticationService.login(this.email.value, this.password.value)
+    if (this.username.valid && this.password.valid) {
+      this.authenticationService.login(this.username.value, this.password.value)
 
         .subscribe(
           data => {

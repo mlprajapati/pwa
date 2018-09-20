@@ -104,7 +104,7 @@
   .disclaimer{
     font-size: 0.8rem;
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     width: 100%;
     margin: auto;
     text-align: center;
@@ -114,9 +114,19 @@
   }
 
   .header-logo{
-    width: 100%;
-    height: 125px;
+    height: 213px;	width: 100%;	background-color: #022C45
+  }
+  .logo{
+    margin: auto;
+    display: block;
+    padding-top: 35px;
   }
   .login-form-container{
     padding-top: 50px;
+  }
+  @media (max-width: 768px) {
+    .logo{
+      width: 350px;
+      padding-top: 55px;
+    }
   }

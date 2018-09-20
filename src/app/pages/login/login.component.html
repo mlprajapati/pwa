@@ -36,10 +36,10 @@
 
 -->
 <!--Starting latest design code-->
-<div>
+<div class="header-logo">
   <!-- <div class="col-md-2"></div> -->
 
-  <img class="header-logo" src=".\assets\images\header-logo.png" id="companyLogo">
+  <img class="logo" src=".\assets\images\header-logo.png" id="companyLogo">
   <!-- <div class="col-md-3"></div> -->
 </div>
 <div class="container-fluid login-form-container">
@@ -48,10 +48,10 @@
   <div class="row">
     <div class="col-md-4 col-md-4"></div>
     <div class="col-sm-12 col-md-4 col-lg-4">
-      <form class="form-signin">
+      <form class="form-signin" [formGroup]="loginForm">
 
         <div class="form-group">
-          <input type="email" id="inputEmail" [formControl]="email" class="form-control" placeholder="user name ..."
+          <input type="text" id="username" [formControl]="username" class="form-control" placeholder="user name ..."
             required autofocus>
         </div>
 
@@ -61,7 +61,7 @@
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-primary form-control">Sign in</button>
+          <button type="submit" (click)="login()" class="btn btn-primary form-control">Sign in</button>
         </div>
       </form>
       <div style="text-align: center;">
