@@ -3,8 +3,29 @@
   .container-fluid {
     background-color: #04264F;
   }
+  .row-css{
+  float:right;
   
-  #sidebarCollapse{a, i{color:#ccc !important;}}
+}
+  
+  #sidebarCollapse{
+    a, i{color:#ccc !important;}}
+  
+
+
+
+
+ /* .democss{
+    padding-left:80%;
+    }
+    
+@media only screen and (max-width:600px){
+.democss{
+ float:right;
+ padding-left:45%;
+}
+}
+  */ 
   
   .navbar-toggler {
     padding: 0.7rem .75rem 0.25rem .20rem !important;
